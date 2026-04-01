@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lab1.creational.abstract_factory
 {
-    internal class abstract_factory
+    public class UABook : IBook
     {
+        public string GetInfo()
+        {
+            return "Це українська книга";
+        }
     }
 }

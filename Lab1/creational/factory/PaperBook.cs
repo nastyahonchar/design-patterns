@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lab1.creational.factory
 {
-    internal class factory
+    public class PaperBook : Book
     {
+        public string GetDescription()
+        {
+            return "This is a paper book.";
+        }
     }
 }

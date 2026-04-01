@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab1.creational.prototype
+namespace Lab1.creational.abstract_factory
 {
-    internal class prototype
+    public interface IBook
     {
+        string GetInfo();
     }
 }

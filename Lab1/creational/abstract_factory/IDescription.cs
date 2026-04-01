@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab1.creational.factory_method
+namespace Lab1.creational.abstract_factory
 {
-    internal class factory_method
+    public interface IDescription
     {
+        string GetDescription();
     }
 }

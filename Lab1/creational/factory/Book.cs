@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab1.creational.builder
+namespace Lab1.creational.factory
 {
-    internal class builder
+    public interface Book
     {
+        string GetDescription();
     }
 }
