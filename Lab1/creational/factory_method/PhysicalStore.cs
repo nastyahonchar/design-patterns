@@ -1,11 +1,10 @@
-﻿using Lab1.creational.factory_method.DesignPatternsLab1.Creational.FactoryMethod;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab1.creational.factory_method
+namespace DesignPatterns.creational.factory_method
 {
     public class PhysicalStore : BookStore
     {

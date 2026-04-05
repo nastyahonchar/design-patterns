@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab1.creational.singleton
+namespace DesignPatterns.creational.singleton
 {
     public class StoreManager
     {
