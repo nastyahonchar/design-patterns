@@ -16,7 +16,7 @@ namespace DesignPatterns.creational
     {
         public static void Run()
         {
-            // Singleton
+            Console.WriteLine("=== CREATIONAL: SINGLETON ===");
             var manager1 = StoreManager.GetInstance();
             var manager2 = StoreManager.GetInstance();
 
@@ -25,7 +25,7 @@ namespace DesignPatterns.creational
 
             Console.WriteLine("------------------");
 
-            // Factory
+            Console.WriteLine("=== CREATIONAL: FACTORY ===");
             FactoryBook fBook1 = BookFactory.CreateBook(FactoryBookType.EBOOK);
             FactoryBook fBook2 = BookFactory.CreateBook(FactoryBookType.PAPER);
 
@@ -34,7 +34,7 @@ namespace DesignPatterns.creational
 
             Console.WriteLine("------------------");
 
-            // Abstract Factory
+            Console.WriteLine("=== CREATIONAL: ABSTRACT FACTORY ===");
             var factory = FactoryMaker.MakeFactory(LanguageType.UA);
 
             var aBook = factory.CreateBook();
@@ -45,7 +45,7 @@ namespace DesignPatterns.creational
 
             Console.WriteLine("------------------");
 
-            // Factory Method
+            Console.WriteLine("=== CREATIONAL: FACTORY METHOD ===");
             BookStore onlineStore = new OnlineStore();
             var fmBook1 = onlineStore.CreateBook(FMBookType.EBOOK);
 
@@ -60,7 +60,7 @@ namespace DesignPatterns.creational
 
             Console.WriteLine("------------------");
 
-            // Builder
+            Console.WriteLine("=== CREATIONAL: BUILDER ===");
             var order1 = new Order.Builder("Nastya", 3)
                 .WithDelivery(DeliveryType.COURIER)
                 .WithPayment(PaymentType.CARD)
@@ -80,7 +80,7 @@ namespace DesignPatterns.creational
 
             Console.WriteLine("------------------");
 
-            // Prototype
+            Console.WriteLine("=== CREATIONAL: PROTOTYPE ===");
             var originalBook = new PrototypeBook("Harry Potter", 500);
             var clonedBook = (PrototypeBook)originalBook.Clone();
 
@@ -89,6 +89,8 @@ namespace DesignPatterns.creational
 
             Console.WriteLine(originalBook.Equals(clonedBook)); // true
             Console.WriteLine(originalBook == clonedBook); // false
+
+            Console.WriteLine("------------------");
         }
     }
 }

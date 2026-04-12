@@ -1,5 +1,5 @@
 ﻿using DesignPatterns.creational;
-//using DesignPatterns.structural;
+using DesignPatterns.structural;
 
 namespace DesignPatterns
 {
@@ -8,7 +8,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
             CreationalRunner.Run();
-            //StructuralRunner.Run();
+            StructuralRunner.Run();
         }
     }
 }
