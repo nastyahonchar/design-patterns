@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.creational;
 using DesignPatterns.structural;
+using DesignPatterns.behavioral;
 
 namespace DesignPatterns
 {
@@ -9,6 +10,7 @@ namespace DesignPatterns
         {
             CreationalRunner.Run();
             StructuralRunner.Run();
+            BehavioralRunner.Run();
         }
     }
 }
