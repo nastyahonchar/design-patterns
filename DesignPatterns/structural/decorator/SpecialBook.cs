@@ -6,24 +6,19 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.structural.decorator
 {
-    public class SpecialBook : IBook
+    public class SpecialBook : BookDecorator
     {
-        private readonly IBook book;
+        public SpecialBook(IBook book) : base(book) { }
 
-        public SpecialBook(IBook book)
+        public override void GetDescription()
         {
-            this.book = book;
+            base.GetDescription();
+            Console.WriteLine("+ special edition");
         }
 
-        public void GetDescription()
+        public override int GetPrice()
         {
-            book.GetDescription();
-            Console.WriteLine("+ special edition (colored edges, premium cover)");
-        }
-
-        public int GetPrice()
-        {
-            return book.GetPrice() + 50;
+            return base.GetPrice() + 50;
         }
     }
 }
