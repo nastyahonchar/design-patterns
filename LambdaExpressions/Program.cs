@@ -25,7 +25,8 @@ class Program
         Console.WriteLine(LambdaTasks.Factorial(5));
 
         Console.WriteLine("\n6) Product & Sum:");
-        Console.WriteLine($"Sum: {LambdaTasks.Sum(ints)}, Product: {LambdaTasks.Product(ints)}");
+        var result = LambdaTasks.SumAndProduct(ints);
+        Console.WriteLine($"Sum: {result.Sum}, Product: {result.Product}");
 
         Console.WriteLine("\n7) Squares:");
         Console.WriteLine(string.Join(", ", LambdaTasks.Squares(ints)));

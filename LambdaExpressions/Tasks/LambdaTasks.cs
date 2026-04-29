@@ -12,7 +12,7 @@ namespace LambdaExpressions.Tasks
             => numbers.Where(x => x % 2 != 0).ToList();
 
         public static double Average(List<double> numbers)
-            => numbers.Average();
+            => numbers.Aggregate(0.0, (acc, x) => acc + x) / numbers.Count;
 
         public static List<string> SortAlphabetical(List<string> list)
             => list.OrderBy(x => x).ToList();
@@ -23,11 +23,11 @@ namespace LambdaExpressions.Tasks
         public static long Factorial(int n)
             => Enumerable.Range(1, n).Aggregate(1L, (acc, x) => acc * x);
 
-        public static int Sum(List<int> numbers)
-            => numbers.Sum();
-
-        public static int Product(List<int> numbers)
-            => numbers.Aggregate(1, (acc, x) => acc * x);
+        public static (int Sum, int Product) SumAndProduct(List<int> numbers)
+            => (
+                numbers.Aggregate(0, (acc, x) => acc + x),
+                numbers.Aggregate(1, (acc, x) => acc * x)
+            );
 
         public static List<int> Squares(List<int> numbers)
             => numbers.Select(x => x * x).ToList();
@@ -36,7 +36,7 @@ namespace LambdaExpressions.Tasks
             => list.OrderBy(x => x.Length).ToList();
 
         public static int CountWords(string sentence)
-            => sentence.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length;
+            => sentence.Split(' ').Count(x => !string.IsNullOrWhiteSpace(x));
 
         public static string FirstNonEmpty(List<string> list)
             => list.FirstOrDefault(x => !string.IsNullOrWhiteSpace(x)) ?? "";
